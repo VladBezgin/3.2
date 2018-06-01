@@ -10,9 +10,9 @@ var arr = [20, 33, 1, 'Человек', 2, 3];
 var summ = 0;
 
 for (var i = 0; i < arr.length; i++) {
-	if ( (typeof(arr[i])) === 'string' ){
-	} else {
-	summ += Math.pow(arr[i], 3); }
+	if ( (typeof(arr[i])) != 'string' ){
+	summ += Math.pow(arr[i], 3);
+	}
 }
 console.log(Math.sqrt(summ));		
 
@@ -20,9 +20,9 @@ console.log(Math.sqrt(summ));
 
 function arg(text) {
 	if( (typeof(text)) === 'string' ) {
-		text = text.replace(/^\s*/,'').replace(/\s*$/,'');
+		text = text.trim();
 		if ( 50 < text.length ) {
-			alert(text.substr(0,50)+'...');
+			alert(text.substr(0,50-3)+'...');
 		}
 		
 	} else {
