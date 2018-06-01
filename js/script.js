@@ -7,13 +7,14 @@ alert(str.replace(/легким/g, 'легкоо'));
 
 
 var arr = [20, 33, 1, 'Человек', 2, 3];
-arr[3] = arr[3].length;
 var summ = 0;
 
 for (var i = 0; i < arr.length; i++) {
-	summ += Math.pow(arr[i], 3);
+	if ( (typeof(arr[i])) === 'string' ){
+	} else {
+	summ += Math.pow(arr[i], 3); }
 }
-console.log(Math.sqrt(summ));	
+console.log(Math.sqrt(summ));		
 
 
 
